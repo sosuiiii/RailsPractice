@@ -1,0 +1,47 @@
+<div class="notice">
+  <% if flash[:notice] %>
+  <%= flash[:notice] %>
+  <% end %>
+</div>
+<div class="container">
+  <div class="itiran">
+  <p class="jobs-heading">Job List</p>
+  </div>
+  <% if @current_user.id == 1 %>
+  <%= form_tag("/jobs/create") do %>
+  <textarea name="content" rows="8" cols="80" ></textarea><br>
+  <!-- <input type="text" name="content" placeholder="ジョブの登録" autocomplete="off"> -->
+  <input type="submit" value="登録">
+  <% end %>
+  <% end %>
+  <% @jobs.each do |job| %>
+    <div class="jobs-index-item">
+      <div class="job-left">
+
+      <span class="fa fa-blog"></span><%= simple_format(job.content) %><br>
+      </div>
+      <div class="jobs-menu">
+        <% if job.user_id != 1 %>
+        <a>締め切り</a>
+        <% end %>
+
+
+        <% if job.user_id == 1 %>
+        <%= link_to("応募","/jobs/#{job.id}/join", {method: "post"}) %>
+        <% end %>
+        <% if @current_user.id == job.user_id%>
+        <a>応募済み</a>
+        <%= link_to("キャンセル","/jobs/#{job.id}/cancel", {method: "post"}) %>
+        <% end %>
+        <% if @current_user.id == 1 %>
+        <%= link_to("強制キャンセル","/jobs/#{job.id}/cancel", {method: "post"}) %>
+        <% end %>
+        <% if @current_user.id == 1 %>
+        <%= link_to("削除","/jobs/#{job.id}/destroy", {method: "post"}) %>
+        <% end %>
+      </div>
+      <div class="job-right">
+      </div>
+    </div>
+  <% end %>
+</div>

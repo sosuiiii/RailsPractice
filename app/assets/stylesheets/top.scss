@@ -1,0 +1,254 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// #slideDown{
+//   display: none;
+// }
+
+.notice {
+  text-align: center;
+  background-color: rgba(0,0,255,0.7);
+  color:white;
+}
+.form-error{
+
+  text-align: center;
+  background-color: rgba(255,0,0,0.6);
+  color:white;
+}
+// ここからindex＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.jobs-index-item {
+  padding: 10px 40px;
+}
+.container {
+  text-align: center;
+
+}
+.jobs-heading {
+  border-radius: 20px;
+  // background-color: blue;
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  // background-color:white;
+  font-size: 30px;
+  box-shadow: 2px 2px 4px gray;
+  text-shadow: 2px 2px 4px gray;
+
+}
+
+.itiran {
+  padding: 0 40px;
+
+}
+.itiran p:hover{
+  color: #D9E5FF;
+  transition: all 0.5s;
+}
+.jobs-index-item {
+  // border: 1px solid gray;
+  margin: 30px 1%;
+  border-radius: 40px;
+  box-shadow: 2px 2px 10px gray;
+  height:auto;
+}
+.job-left {
+  // background-color: white;
+  padding-bottom: 10px;
+}
+.jobs-menu{
+  text-align: right;
+}
+.jobs-menu a{
+  // float: right;
+　display: inline-block;
+  padding:0 10px;
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 40px;
+  text-decoration: none;
+  color: black;
+}
+.jobs-menu a:hover{
+  // color: #D9E5FF;
+  transition: all 0.5s;
+  text-shadow: 2px 2px 4px gray;
+}
+.jobs-menu a:active{
+  box-shadow: 2px 2px 4px gray inset;
+}
+.fa{
+  text-shadow: 2px 2px 4px gray;
+}
+
+
+// ここまでindex＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// ここからnew＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.form {
+  margin: 20px;
+  text-align:center;
+  // background-color: yellow;
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 40px;
+  // width: 200px;
+}
+
+.new {
+  text-align:center;
+  margin: 10px;
+  // background-color: blue;
+}
+.touroku-container {
+  margin: 0 auto;
+}
+// ここまでnew＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// ここからsignup＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.login-form {
+  text-align: center;
+  margin-top: 30px;
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 40px;
+  // background-color: yellow;
+}
+.signup {
+  margin: 10px;
+  // background-color: blue;
+}
+
+// ここまでsignup＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// ここからline＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+.line1 {
+  border: 0.5px solid #A7F1FF;
+  transform:skew(1deg,10deg);
+  position: relative;
+  top: 100px;
+  z-index: -1;
+}
+.line2 {
+  border: 0.5px solid #8EB8FF;
+  transform:skew(1deg,-10deg);
+  position: relative;
+  top: 200px;
+   z-index: -1;
+}
+.line3 {
+  border: 0.5px solid #B384FF;
+  transform:skew(1deg,-30deg);
+  position: relative;
+  top: 300px;
+   z-index: -1;
+}
+.line4 {
+  border: 0.5px solid #A7F1FF;
+  transform:skew(1deg,40deg);
+  position: relative;
+  top: 400px;
+   z-index: -1;
+}
+.line5 {
+  border: 0.5px solid #8EB8FF;
+  transform:skew(1deg,10deg);
+  position: relative;
+  top: 500px;
+   z-index: -1;
+}
+.line6 {
+  border: 0.5px solid #B384FF;
+  transform:skew(1deg,-5deg);
+  position: relative;
+  top: 600px;
+   z-index: -1;
+}
+.line7 {
+  border: 0.5px solid #A7F1FF;
+  transform:skew(1deg,30deg);
+  position: relative;
+  top: 700px;
+   z-index: -1;
+}
+.line8 {
+  border: 0.5px solid #8EB8FF;
+  transform:skew(1deg,1deg);
+  position: relative;
+  top: 800px;
+   z-index: -1;
+}
+.line9 {
+  border: 0.5px solid #B384FF;
+  transform:skew(1deg,-60deg);
+  position: relative;
+  top: 900px;
+   z-index: -1;
+}
+.line10 {
+  border: 0.5px solid #A7F1FF;
+  transform:skew(1deg,10deg);
+  position: relative;
+  top: 1000px;
+   z-index: -1;
+}
+.line11 {
+  border: 0.5px solid #8EB8FF;
+  transform:skew(1deg,60deg);
+  position: relative;
+  top: 1100px;
+   z-index: -1;
+}
+.line12 {
+  border: 0.5px solid #A7F1FF;
+  transform:skew(1deg,-10deg);
+  position: relative;
+  top: 1200px;
+   z-index: -1;
+}
+// ここまでline＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// ここからabout＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// .about-header{
+//   display: none;
+// }
+.effect{
+  margin-bottom: 100px;
+}
+.effect p{
+  transition: 1s;
+}
+.effect div{
+  transition: 1.5s;
+  transition-delay: 0.5s;
+}
+.about-header{
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  text-align: center;
+  // padding: 20px 0;
+  // box-shadow:2px 2px 4px gray;
+  // border-radius: 40px;
+  // margin: 0 50px;
+}
+.title{
+  margin-bottom: 100px;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px gray;
+}
+.i {
+  font-size: 25px;
+  text-shadow: 2px 2px 4px gray;
+}
+.ganbaru {
+  font-size: 25px;
+  text-shadow: 2px 2px 4px gray;
+}
+.nande {
+  font-size: 25px;
+  text-shadow: 2px 2px 4px gray;
+}
+
+// ここまでabout＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// ここからmyPage＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.user_status {
+  text-align:center;
+  margin-top: 20px;
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 20px;
+  padding: 20px 40px;
+  margin: 20px 40px;
+
+}
+// ここまでmyPage＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝

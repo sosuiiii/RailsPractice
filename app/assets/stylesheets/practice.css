@@ -1,0 +1,83 @@
+
+ul{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.menu-bar-wrap ul{
+  padding: 0;
+  margin: 0;
+}
+.menu-bar-wrap {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+.menu-bar-wrap li {
+  box-sizing: border-box;
+
+}
+.menu-bar-wrap li:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-bar-wrap > li{
+  line-height: 40px;
+  height: 40px;
+  width: 33.3%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  float: left;
+  transition: 0.3s;
+}
+.menu-bar-wrap > li > a{
+  height: 40px;
+  font-weight: bold;
+}
+.menu-bar-wrap > li a{
+  color: white;
+}
+.menu-bar-wrap li ul{
+  width: 100%;
+  position: absolute;
+  top: 100%;
+}
+.menu-bar-wrap li ul li{
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  text-align: center;
+  display: block;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.menu-bar-wrap > li:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+.menu-bar-wrap li:hover ul li{
+  display: block;
+}
+.menu-bar-wrap li ul li ul{
+  float: left;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  display: none;
+  color: white;
+}
+.menu-bar-wrap li ul li:hover ul{
+  display: block;
+}
+.second-li{
+  position: relative;
+}
+.second-ul{
+  position: absolute;
+}

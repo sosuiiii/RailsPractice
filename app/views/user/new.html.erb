@@ -1,0 +1,18 @@
+<% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+        <% end %>
+<%= form_tag("/user/create") do %>
+<div class="touroku-container">
+<div class="form">
+ユーザー名
+<input type="text"name="name" class="new"><br>
+メールアドレス
+<input type="text" name="email" class="new"><br>
+パスワード
+<input type="password" name="password" class="new"><br>
+<input type="submit" value="登録">
+</div>
+</div>
+<% end %>

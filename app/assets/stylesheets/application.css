@@ -1,0 +1,292 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* *{
+  box-sizing: border-box;
+} */
+@media (max-width: 640px){
+  .top-bar{
+    display:none;
+  }
+}
+@media (min-width: 641px){
+  .top-bar2{
+    display: none;
+  }
+}
+.menu-wrap {
+  height: 37px;
+  position: fixed;
+  /* z-index: 10; */
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 0 2px rgba(0,0,0,0.7);
+  transition: 0.3s;
+
+
+}
+#menu {
+  list-style-type: none;
+  margin: 0 20%;
+  padding: 0;
+  text-align: center;
+}
+#menu2 {
+  list-style-type: none;
+  margin: 0 7%;
+  padding: 0px;
+  text-align: left;
+}
+#menu li{
+ float: left;
+ width: 25%;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+}
+#menu li a{
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 7px 0;
+}
+.sample1{
+  list-style: none;
+  display:none;
+}
+
+.sample1 a,.close-sample{
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.4);
+
+  text-decoration: none;
+  color: white;
+
+  width: 100%;
+  padding: 7px 0;
+  text-align: center;
+
+}
+.sample1 a:hover,.close-sample:hover{
+  background: rgba(0,0,0,0.6);
+  transition: 0.5s;
+}
+
+.sample2{
+  position: absolute;
+  top: 40px;
+  left: -1px;
+
+}
+.sample3 {
+  position: absolute;
+  top: 80px;
+  left: -1px;
+
+}
+.close-sample{
+  font-size: 10px;
+  position: absolute;
+  top: 109px;
+  left: -1px;
+}
+.hamburger{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 15%;
+  padding: 7px 0;
+  text-align: center;
+}
+.hamburger:hover{
+  background: rgba(0,0,0,0.4);
+  transition: 1s;
+
+}
+#menu li a:hover{
+  background: rgba(0,0,0,0.4);
+  transition: 1s;
+}
+.status{
+  text-align: center;
+}
+.status a{
+  color: black;
+}
+
+ body {
+   /* background-image: url("https://images.unsplash.com/photo-1496167117681-944f702be1f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"); */
+
+ }
+.header-left {
+  height: 45px;
+  text-align: center;
+  /* background-color: blue; */
+  /* border-top: 2px solid black; */
+  border-bottom: 1px solid #D9E5FF;
+  padding-bottom: 20px;
+  /* background-color: #EEEEEE; */
+  box-shadow: 2px 2px 4px gray;
+}
+.header-left p{
+　 display: inline-block;
+   /* font-family: arial, sans-serif; */
+   font-size: 40px;
+}
+.header-left a{
+  text-shadow: 2px 2px 4px gray;
+  text-decoration: none;
+  color: black;
+  /* font-family:  'Lobster', cursive; */
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+  /* font-family: arial, sans-serif; */
+}
+.header-left a:hover{
+  color: #D9E5FF;
+  transition: all 0.5s;
+}
+.header-left a:active{
+  box-shadow: 2px 2px 4px gray inset;
+  border-radius: 10px;
+}
+.header-right {
+  text-align: center;
+  /* background-color: yellow; */
+  height: 60px;
+  margin-bottom: 10px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  border-bottom: 15px solid white;
+
+  /* background-color: white; */
+}
+
+.header-right li {
+
+  text-shadow: 2px 2px 4px gray;
+  list-style: none;
+  /* border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; */
+  border-radius: 20px;
+  display: inline-block;
+  margin: 3px 3px 10px 10px;
+  padding: 2px 5px;
+
+}
+.header-right a {
+  text-decoration: none;
+  color: black;
+
+}
+.fa-envelope {
+  color: white;
+  padding-left: 6px;
+}
+.touroku {
+  /* background: linear-gradient(5deg,#D9E5FF, #EAD9FF); */
+ box-shadow: 2px 2px 4px gray;
+}
+.touroku a:hover{
+  color: #D9E5FF;
+  transition: all 0.5s;
+  text-shadow: 2px 2px 4px gray;
+}
+.touroku:active{
+  box-shadow: 2px 2px 4px gray inset;
+}
+.login{
+  /* background: linear-gradient(60deg,#D9E5FF,#EAD9FF); */
+ box-shadow: 2px 2px 4px gray;
+}
+.login a:hover{
+  color: #D9E5FF;
+  transition: all 0.5s;
+  text-shadow: 2px 2px 4px gray;
+}
+.login:active{
+  box-shadow: 2px 2px 4px gray inset;
+}
+.itiran1 {
+  /* background: linear-gradient(120deg,#D9E5FF,#EAD9FF); */
+  box-shadow: 2px 2px 4px gray;
+}
+.itiran1 a:hover{
+  color: #D9E5FF;
+  transition: all 0.5s;
+  text-shadow: 2px 2px 4px gray;
+}
+.itiran1:active{
+  box-shadow: 2px 2px 4px gray inset;
+}
+.line {
+  /* background: linear-gradient(180deg,#D9E5FF,#EAD9FF); */
+  box-shadow: 2px 2px 4px gray;
+}
+.line a:hover{
+  color: #D9E5FF;
+  transition: all 0.5s;
+  text-shadow: 2px 2px 4px gray;
+}
+.line:active{
+  box-shadow: 2px 2px 4px gray inset;
+}
+.otoiawase {
+  /* background: linear-gradient(240deg,#D9E5FF,#EAD9FF); */
+  box-shadow: 2px 2px 4px gray;
+
+}
+.otoiawase a:hover{
+  transition: all 0.5s;
+  color: #D9E5FF;
+  text-shadow: 2px 2px 4px gray;
+}
+.otoiawase:active{
+  box-shadow: 2px 2px 4px gray inset;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.under-bar{
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 0 2px rgba(0,0,0,0.7);
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+
+}
+.to-top{
+  text-align: center;
+
+
+}
+.fa-angle-double-up{
+  font-size: 20px;
+  border: 1px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 7px;
+  color: white;
+  /* text-shadow:1px 1px 1px black; */
+  box-shadow: 1px 1px 1px black;
+}

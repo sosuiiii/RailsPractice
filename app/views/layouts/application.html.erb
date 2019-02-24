@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="images/timewire.ico" rel="shortcut icon">
+    <title>WORKER</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- 下部にjs装飾コードあり＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ -->
+    <div class="top-bar">
+      <nav class="menu-wrap">
+        <ul id="menu">
+          <li><a href="#"><span class="fa fa-arrow-up"></span></a></li>
+          <li><a href="#"><span class="fab fa-android"></span></a></li>
+          <li><a href="#"><span class="fa fa-atom"></span></a></li>
+          <li><a href="practice/"><span class="fab fa-aws"> (practice)</span></a></li>
+
+        </ul>
+      </nav>
+    </div>
+    <div class="top-bar2">
+      <nav class="menu-wrap">
+        <ul id="menu2">
+          <li><a class="hamburger"><span class="fa fa-align-justify"></span></a>
+            <ul class="sample1">
+              <li><a class="sample2" href="#">活動きろく</a></li>
+              <li><a class="sample3" href="#">思い出</a></li>
+              <li><p class="close-sample">close</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="header">
+      <div class="header-left">
+        <p><%= link_to("TIMEBITE","/") %></p>
+        </div>
+      </div>
+    <div class="no-header">
+      <div class="header-right">
+      <ul>
+        <% if @current_user == nil %>
+        <li class="touroku"><%= link_to("新規登録","/user/new") %> </li>
+        <li class="login"><%= link_to("ログイン","/signup") %></li>
+        <% end %>
+        <% if @current_user %>
+        <li class="login"><%= link_to("ログアウト","/logout") %></li>
+        <% end %>
+        <li class="itiran1"><%= link_to("ジョブ一覧","/jobs/index") %></li>
+        <li class="line"><a href="#">公式ライン</a></li>
+        <li class="otoiawase"><a href="mailto:info@example.com?subject=timewire&amp;body=%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝%0D%0A24時間以内に返信いたします">お問い合わせ</a><span class="fa fa-envelope"></span></li>
+      </ul>
+      </div>
+     </div>
+     <div class="status">
+       <% if @current_user %>
+        welcom!
+       <%= @current_user.name %>
+       <br>
+       <%= link_to("マイページ", "/user/myPage") %>
+       <% end %>
+     </div>
+    <div class="line-group">
+     <div class="line1"></div>
+     <!-- <div class="line2"></div> -->
+     <!-- <div class="line3"></div> -->
+     <div class="line4"></div>
+     <!-- <div class="line5"></div> -->
+     <!-- <div class="line6"></div> -->
+     <!-- <div class="line7"></div> -->
+     <div class="line8"></div>
+     <div class="line9"></div>
+     <!-- <div class="line10"></div> -->
+     <!-- <div class="line11"></div> -->
+     <div class="line12"></div>
+　　</div>
+    <%= yield %>
+    <div class="under-bar">
+      <a href="#" class="to-top">
+      <span class="fa fa-angle-double-up"></span>
+      </a>
+    </div>
+  </body>
+</html>
+<!-- top-barに装飾しています＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ -->
+<script>
+  $(function(){
+  // var menuHeight = $("#menu-wrap").height();
+
+
+  var startPos = 0;
+  $(window).scroll(function(){
+    var currentPos = $(this).scrollTop();
+    if (currentPos > startPos) {
+      if($(window).scrollTop() >= 100) {
+        $(".menu-wrap").css("top", "-37px");
+      }
+    } else {
+      $(".menu-wrap").css("top", 0 + "px");
+    }
+    startPos = currentPos;
+  });
+
+
+  $('.hamburger').click(function(){
+       $('.sample1').fadeIn();
+     });
+
+  $('.close-sample').click(function(){
+      $('.sample1').fadeOut();
+  });
+
+
+  $('a[href^="#"]').click(function(){
+   var href= $(this).attr('href');
+   var target = $(href == "#" || href == "" ? 'html' : href);
+   var position = target.offset().top;
+   $('html, body').animate({scrollTop:position}, '400', 'swing');
+   return false;
+ });
+});
+</script>

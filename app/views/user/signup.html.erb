@@ -1,0 +1,25 @@
+
+<% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+        <% end %>
+<% if flash[:error] %>
+<div class="form-error">
+<%= flash[:error] %>
+<% end %>
+</div>
+<% if flash[:notice] %>
+<div class="notice">
+<%= flash[:notice] %>
+<% end %>
+</div>
+<div class="login-form">
+  <%= form_tag("/login") do %>
+  メールアドレス
+  <input type="text" name="email" class="signup"><br>
+  パスワード
+  <input type="password" class="signup" name="password"><br>
+  <input type="submit" value="ログイン" class="signup">
+</div>
+<% end %>

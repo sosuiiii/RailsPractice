@@ -1,0 +1,62 @@
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<div class="about-header">
+  <p class="title">↓TIMEBITEとは↓</p>
+  <div class="effect">
+    <p class="i">バイトマッチングサービス</p>
+    <div class="p">
+      <p>好きなときに</p>
+      <p>好きな場所で</p>
+      <p>働きたい</p>
+      <p>そんな想いに応えるために</p>
+      <p>サービスをはじめました。</p>
+    </div>
+
+
+  </div>
+  <div class="effect">
+    <p class="i">頑張る分だけ高時給</p>
+    <div class="p">
+      <p>TIMEBITEでは</p>
+      <p>頑張る分だけ</p>
+      <p>積極的に時給をあげる制度を採用</p>
+      <p>頑張る人には</p>
+      <p>それなりの時給を。</p>
+    </div>
+  </div>
+  <div class="effect">
+    <p class="i">なんで高時給なの？</p>
+    <div class="p">
+      <p>たとえばあなたが</p>
+      <p>一人で二人分働けるとしたら</p>
+      <p>あなたには二人分の給料があって良いのです。</p>
+      <p>本来なら時給1000円のバイトでも</p>
+      <p>時給2000円分の仕事をできるんです。</p>
+      <p>そんな人の時給を</p>
+      <p>積極的に上げていく環境作りに</p>
+      <p>TIMEBITEは尽力しています。</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function(){
+  $('.p, .i').css('opacity','0');
+  $(window).scroll(function(){
+    $('.effect').each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if(scroll > imgPos - windowHeight + windowHeight/2){
+        $('.i,.p',this).css('opacity','1');
+      }else{
+        $('.i,.p',this).css('opacity','0');
+      }
+    });
+  });
+  });
+</script>
+
+<!-- http://weboook.blog22.fc2.com/blog-entry-415.html -->
+<!-- http://js.crap.jp/book/chapter5/scroll-appear.html# -->
