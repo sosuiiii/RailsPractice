@@ -1,6 +1,16 @@
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+<p>アプリ説明</p>
+<p>管理者のメールアドレス、パスワードは共に１です。</p>
+<p>管理者権限として、ジョブの投稿、強制キャンセル、投稿削除ができます。</p>
+<p>一般ユーザーとして、メールアドレス、パスワードがそれぞれ</p>
+<p>2、2と3、3の2名分作成しています。</p>
+<p>ユーザーAがジョブに応募すると、応募済み、キャンセルが表示されます。</p>
+<p>ユーザーBがその投稿を見ると、締め切りが表示され、応募できなくなります。</p>
+<p>未ログインユーザーはジョブ一覧を確認できません。</p>
+
+
 <div class="about-header">
   <p class="title">↓TIMEBITEとは↓</p>
   <div class="effect">
@@ -51,7 +61,7 @@
       if(scroll > imgPos - windowHeight + windowHeight/2){
         $('.i,.p',this).css('opacity','1');
       }else{
-        $('.i,.p',this).css('opacity','0');
+        $('.i,.p',this).css('opacity','0.1');
       }
     });
   });
